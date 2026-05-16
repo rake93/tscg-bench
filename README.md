@@ -15,7 +15,7 @@
 
 The gap is real and reproducible. TSCG's `estimateTokens` uses model-specific char-per-token ratios (`TokenizerProfile`) rather than running the actual BPE. The compression itself is genuine — it's the *measurement* that needs context.
 
-![headline_savings](docs/assets/headline_savings.png)
+![headline_savings](docs/diagrams/headline_savings.png)
 
 ## Why this exists
 
