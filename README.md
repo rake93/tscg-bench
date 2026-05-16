@@ -1,4 +1,4 @@
-# tscg-pybench
+# tscg-bench
 
 > Independent Python reproduction of the [TSCG paper](https://arxiv.org/abs/2605.04107)'s tool-schema compression claims, with an honest tokenizer audit.
 
@@ -26,7 +26,7 @@ But:
 2. Token counts in the paper are computed by `@tscg/core`'s own estimator, not a real BPE.
 3. No independent third-party reproduction was public when this repo started.
 
-`tscg-pybench` fixes all three: a thin Python adapter over `@tscg/core` plus an `tiktoken`-based independent token count, with a 27-cell sweep over 3 catalogs × 3 profiles × 3 models.
+`tscg-bench` fixes all three: a thin Python adapter over `@tscg/core` plus an `tiktoken`-based independent token count, with a 27-cell sweep over 3 catalogs × 3 profiles × 3 models.
 
 ## Architecture
 
@@ -37,8 +37,8 @@ The Python side never trusts the bridge's self-reported token counts on its own 
 ## Quickstart
 
 ```bash
-git clone https://github.com/rake93/tscg-pybench
-cd tscg-pybench
+git clone https://github.com/rake93/tscg-bench
+cd tscg-bench
 
 # Node bridge (zero-dependency @tscg/core)
 npm install --ignore-scripts
@@ -51,7 +51,7 @@ pytest
 
 # Reproduce the headline chart
 python -c "
-from tscg_pybench.bench import run_benchmark, write_csv
+from tscg_bench.bench import run_benchmark, write_csv
 rows = run_benchmark(
     catalogs=['small_5tools', 'mid_20tools', 'mcp_filesystem'],
     profiles=('conservative', 'balanced', 'aggressive'),
@@ -92,7 +92,7 @@ Full 27-row sweep (incl. conservative + aggressive profiles): see `out/bench_res
 ## Repo layout
 
 ```
-src/tscg_pybench/
+src/tscg_bench/
   bridge.mjs          # Node 18+ shim over @tscg/core (stdin JSON → stdout JSON)
   compiler.py         # TSCGCompiler — Python subprocess wrapper
   catalog.py          # load_catalog / list_catalogs / fixture_dir

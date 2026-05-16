@@ -1,10 +1,10 @@
-"""Tests for tscg_pybench.compiler."""
+"""Tests for tscg_bench.compiler."""
 
 from __future__ import annotations
 
 import pytest
 
-from tscg_pybench.compiler import CompressionResult, TSCGCompiler
+from tscg_bench.compiler import CompressionResult, TSCGCompiler
 
 CALC_TOOL: dict = {
     "type": "function",

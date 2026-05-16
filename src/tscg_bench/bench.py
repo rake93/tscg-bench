@@ -11,9 +11,9 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable
 
-from tscg_pybench.catalog import load_catalog
-from tscg_pybench.compiler import CompressionResult, Model, Profile, TSCGCompiler
-from tscg_pybench.tokens import count_schema_tokens, count_tokens, tiktoken_available
+from tscg_bench.catalog import load_catalog
+from tscg_bench.compiler import CompressionResult, Model, Profile, TSCGCompiler
+from tscg_bench.tokens import count_schema_tokens, count_tokens, tiktoken_available
 
 
 @dataclass(frozen=True)

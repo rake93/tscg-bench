@@ -1,10 +1,10 @@
-"""Tests for tscg_pybench.catalog."""
+"""Tests for tscg_bench.catalog."""
 
 from __future__ import annotations
 
 import pytest
 
-from tscg_pybench.catalog import fixture_dir, list_catalogs, load_catalog
+from tscg_bench.catalog import fixture_dir, list_catalogs, load_catalog
 
 
 def test_fixture_dir_exists() -> None:

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "tscg-pybench"
+name = "tscg-bench"
 version = "0.1.0"
 description = "Independent Python reproduction of the TSCG paper's tool-schema compression claims."
 readme = "README.md"
@@ -34,16 +34,16 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/rake93/tscg-pybench"
-Issues = "https://github.com/rake93/tscg-pybench/issues"
+Homepage = "https://github.com/rake93/tscg-bench"
+Issues = "https://github.com/rake93/tscg-bench/issues"
 "TSCG Paper" = "https://arxiv.org/abs/2605.04107"
 "TSCG Reference Impl" = "https://github.com/SKZL-AI/tscg"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/tscg_pybench"]
+packages = ["src/tscg_bench"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"src/tscg_pybench/bridge.mjs" = "tscg_pybench/bridge.mjs"
+"src/tscg_bench/bridge.mjs" = "tscg_bench/bridge.mjs"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

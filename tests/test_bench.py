@@ -1,10 +1,10 @@
-"""Tests for tscg_pybench.bench end-to-end runner."""
+"""Tests for tscg_bench.bench end-to-end runner."""
 
 from __future__ import annotations
 
 from pathlib import Path
 
-from tscg_pybench.bench import BenchmarkRow, run_benchmark, write_csv
+from tscg_bench.bench import BenchmarkRow, run_benchmark, write_csv
 
 
 def test_run_benchmark_smoke() -> None:

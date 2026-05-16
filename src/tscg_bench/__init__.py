@@ -5,9 +5,9 @@ Paper:  Sakizli, F. "TSCG: Deterministic Tool-Schema Compilation for Agentic LLM
 Ref:    https://github.com/SKZL-AI/tscg  (TypeScript reference implementation, MIT)
 """
 
-from tscg_pybench.bench import BenchmarkRow, run_benchmark
-from tscg_pybench.catalog import list_catalogs, load_catalog
-from tscg_pybench.compiler import CompressionResult, TSCGCompiler
+from tscg_bench.bench import BenchmarkRow, run_benchmark
+from tscg_bench.catalog import list_catalogs, load_catalog
+from tscg_bench.compiler import CompressionResult, TSCGCompiler
 
 __version__ = "0.1.0"
 __all__ = [
