@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+develop-eggs/
+parts/
+sdist/
+wheels/
+
+# Tests / type-check
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Virtual envs
+.venv/
+venv/
+env/
+.python-version
+
+# Node (used by @tscg/core bridge)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+npm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Bench output
+out/
+results/
+*.csv
+*.png
+
+# Local reference clone of the upstream TS repo
+/tscg-ref/

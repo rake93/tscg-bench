@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <linearGradient id="py" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="ts" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fecaca"/>
+    </linearGradient>
+    <linearGradient id="data" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">tscg-pybench architecture</text>
+  <text x="450" y="54" text-anchor="middle" font-size="12" fill="#475569">Python harness over @tscg/core with an independent tiktoken audit</text>
+
+  <rect x="40" y="100" width="180" height="100" rx="10" fill="url(#data)" stroke="#d97706" stroke-width="1.5"/>
+  <text x="130" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">fixtures/tools/</text>
+  <text x="130" y="150" text-anchor="middle" font-size="11" fill="#78350f">small_5tools.json</text>
+  <text x="130" y="167" text-anchor="middle" font-size="11" fill="#78350f">mid_20tools.json</text>
+  <text x="130" y="184" text-anchor="middle" font-size="11" fill="#78350f">mcp_filesystem.json</text>
+
+  <rect x="280" y="110" width="170" height="80" rx="10" fill="url(#py)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="365" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">catalog.py</text>
+  <text x="365" y="158" text-anchor="middle" font-size="11" fill="#1e40af">load_catalog()</text>
+  <text x="365" y="174" text-anchor="middle" font-size="11" fill="#1e40af">list_catalogs()</text>
+
+  <rect x="280" y="240" width="170" height="80" rx="10" fill="url(#py)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="365" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">compiler.py</text>
+  <text x="365" y="288" text-anchor="middle" font-size="11" fill="#1e40af">TSCGCompiler.compress()</text>
+  <text x="365" y="304" text-anchor="middle" font-size="11" fill="#1e40af">subprocess(node, bridge.mjs)</text>
+
+  <rect x="40" y="240" width="180" height="80" rx="10" fill="url(#py)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">tokens.py</text>
+  <text x="130" y="288" text-anchor="middle" font-size="11" fill="#1e40af">tiktoken (cl100k_base)</text>
+  <text x="130" y="304" text-anchor="middle" font-size="11" fill="#1e40af">independent BPE counter</text>
+
+  <rect x="510" y="240" width="170" height="80" rx="10" fill="url(#ts)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="595" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">bridge.mjs</text>
+  <text x="595" y="288" text-anchor="middle" font-size="11" fill="#991b1b">stdin: JSON schema</text>
+  <text x="595" y="304" text-anchor="middle" font-size="11" fill="#991b1b">stdout: JSON {compressed, stats}</text>
+
+  <rect x="730" y="240" width="140" height="80" rx="10" fill="url(#ts)" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="800" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">@tscg/core</text>
+  <text x="800" y="288" text-anchor="middle" font-size="11" fill="#991b1b">compress(tools)</text>
+  <text x="800" y="304" text-anchor="middle" font-size="11" fill="#991b1b">8 operators: SDM/CAS/...</text>
+
+  <rect x="280" y="370" width="170" height="60" rx="10" fill="url(#py)" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="365" y="395" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">bench.py</text>
+  <text x="365" y="412" text-anchor="middle" font-size="11" fill="#1e40af">BenchmarkRow CSV</text>
+
+  <line x1="220" y1="150" x2="278" y2="150" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="365" y1="192" x2="365" y2="238" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="450" y1="280" x2="508" y2="280" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="680" y1="280" x2="728" y2="280" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="220" y1="280" x2="278" y2="280" stroke="#475569" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="365" y1="322" x2="365" y2="368" stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="380" width="14" height="14" fill="url(#py)" stroke="#2563eb"/>
+  <text x="62" y="392" font-size="11" fill="#1e3a8a">Python (this repo)</text>
+  <rect x="160" y="380" width="14" height="14" fill="url(#ts)" stroke="#dc2626"/>
+  <text x="182" y="392" font-size="11" fill="#7f1d1d">TypeScript / npm</text>
+  <rect x="40" y="402" width="14" height="14" fill="url(#data)" stroke="#d97706"/>
+  <text x="62" y="414" font-size="11" fill="#92400e">data / fixtures</text>
+  <line x1="160" y1="409" x2="180" y2="409" stroke="#475569" stroke-dasharray="4,3"/>
+  <text x="186" y="412" font-size="11" fill="#475569">independent audit path</text>
+</svg>
